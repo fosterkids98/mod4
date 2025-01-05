@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Style the navbar container */
+  .navbar {
+    border-radius: 10px;
+    position: sticky;
+    background-color: #ce4993;
+    text-align: center; 
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 3);
+  }
+  
+  /* Style the unordered list */
+  .navbar ul {
+    list-style-type: none; /* Remove default bullets */
+  }
+  
+  /* Style each list item */
+  .navbar ul li {
+    display: inline; /* Align items horizontally */
+    margin: 0 20px; /* Spacing between links */
+  }
+  
+  /* Style the links */
+  .navbar ul li a {
+    font-family: fantasy;
+    text-decoration: none; /* Remove underline */
+    color: #6a0d83; 
+    font-size: 18px;
+    padding: 8px 16px;
+    display: inline-block; 
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Change the background color on hover */
+  .navbar ul li a:hover {
+    color: #eeaf61;
+    background-color: #6a0d83; /* Lighter dark background */
+    border-radius: 10px; /* Slightly rounded corners on hover */
+    
+  }
+
+body {
+    background-color: #eeaf61;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: cursive;
+    color: #eeaf61;
+}
+.welcome {
+    font-family: fantasy;
+    background-color: #ee5d6c;
+    text-align: center;
+    color: #eeaf61;
+}
+h1 {
+    text-align: center;
+    color: #eeaf61;
+    background-color: #6a0d83;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+h6 {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.menu_img {
+    height: 100px;
+    width: 100px;
+    
+}
+
+.contact_header {
+    text-align: center;
+}
+
+.form {
+    background-color: #ce4993;
+    display: block;
+    text-align: center;
+    width: 100vw;
+    height: 100vw;
+    max-width: 650px;
+    max-height: 450px;
+    margin: 1.0em auto;
+
+}
+
+.contact_fieldset {
+    background-color: #ee5d6c;
+    border-radius: 10px;
+    width: 100vw;
+    height: 100vw;
+    max-width: 600px;
+    max-height: 350px;
+    text-align: center;
+    box-shadow:  0 2px 4px black;
+    
+    margin: 1.0em auto;
+    
+}
+
+fieldset {
+    background-color: #fb9062;
+    text-align: center;
+    
+}
+
+p {
+    
+    text-align: center;
+}
+
+.events {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 15px;
+    
+}
+
+.event_field {
+    max-width: 300px;
+    box-shadow: 0 2px 4px black;
+}
+
+.map {
+    width: 100vw;
+    height: 100vw;
+    max-width: 800px;
+    max-height: 600px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.map2 {
+    width: 100vw;
+    max-width: 1200;
+    height: 100vw;
+    max-height: 1080;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.reviews-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header Styling */
+  .reviews-table th {
+    background-color: #6a0d83;
+    color: #eeaf61;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  /* Table Cell Styling */
+  .reviews-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Row Hover Effect */
+  .reviews-table tr:hover {
+    background-color: #ee5d6c;
+  }
+  
+  /* Zebra Stripes for Rows */
+  .reviews-table tr:nth-child(even) {
+    background-color: #eeaf61;
+  }
+  
+  .reviews-table tr:nth-child(odd) {
+    background-color: #eeaf61bf;
+  }
+  
+  /* Border Styling */
+  .reviews-table {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .reviews-table {
+      font-size: 12px;
+    }
+  
+    .reviews-table th, .reviews-table td {
+      padding: 8px;
+    }
+  }
+
+  .menu_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    margin: 20px 0;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .menu_table th {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Table Cell Styling */
+  .menu_table td {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Price Column Styling */
+  .menu_table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #2e8b57;
+  }
+  .menu_table tr:hover {
+    background-color: #f7f7f7;
+  }
+  
+  /* Zebra Stripes for Rows */
+  .menu_table tr:nth-child(even):not(.category) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu_table {
+      font-size: 12px;
+    }
+  
+    .menu_table th, .menu_table td {
+      padding: 8px;
+    }
+  }

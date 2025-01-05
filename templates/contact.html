@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Webpage</title>
+  <script>
+    
+  </script>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header>
+    
+    <h1>Amphitheatrum Flavium</h1>
+    <img src="https://www.freewebheaders.com/wp-content/gallery/the-colosseum/the-colosseum-of-rome-landscape-header.jpg" alt="The Flavian Amphitheatre" style="width: 100%; height: 200px;">
+    <nav class="navbar">
+        <ul>              
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact/Review</a></li></ul>
+    </nav>
+  </header>
+    <form class="form" method="post">
+        <header class="contact_header">Contact Us</header>
+        <fieldset class="contact_fieldset">
+            <legend>Personal Information</legend>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <br><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email" required placeholder="Enter your email">
+
+            <br>
+            <br>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" required placeholder="Enter your message here"></textarea>
+            <br>
+            <label for="how_heard">How did you hear about us?</label><br>
+            <select id="how_heard" name="how_heard">
+                <option value="Search Engine">Search Engine</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend or Family">Friend or Family</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <input type="submit" value="Send">
+        </fieldset>  
+        
+    </form>
+
+    <form class="form" method="post">
+        <header class="contact_header">Leave a Review</header>
+        <fieldset class="contact_fieldset">
+            
+            <label for="name">Name:</label><br>
+            <textarea id="reviewer" name="name" required placeholder="Enter your name"></textarea><br><br>
+                                    
+            <label for="rating">Rating (1 to 5):</label><br>
+            <input type="number" id="rating" name="rating" required min="1" max="5" placeholder="Enter #1-5"><br><br>
+            
+            <label for="review">Your Review:</label><br>
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Why that rating?"></textarea><br><br>
+                
+            
+                
+            <input type="button" value="Submit" onclick="submitReview()">
+        </fieldset>
+    </form>
+        
+        <script>
+            function submitReview() {
+                var name = document.getElementById("reviewer").value;
+                var email = document.getElementById("email").value;
+                var rating = document.getElementById("rating").value;
+                var reviewText = document.getElementById("review").value;
+                var howHeard = document.getElementById("how_heard").value;
+                
+                var reviewData = {
+                    name: name,
+                    email: email,
+                    rating: rating,
+                    review: reviewText,
+                    how_heard: howHeard
+                    };
+                    
+                fetch("/submit-review", {
+                    method: "POST",
+                    body: JSON.stringify(reviewData),
+                    headers: {"Content-Type": "application/json"}
+                }).then(response => response.json()).then(data => {
+                    if (data.status === 'success') {
+                        alert("Review submitted successfully!");
+                        document.getElementById("reviewForm").reset(); // Clear form
+                    }
+                });
+            }
+        </script>
+</body>
+</html>
